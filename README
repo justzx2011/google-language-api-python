@@ -1,0 +1,30 @@
+Python wrapper for Google AJAX Language API
+
+by DaNmarner danmarner[at]gmail[dot]com
+http://github.com/DaNmarner/google-language-api-python
+
+Licensed under MIT license.
+
+Usage:
+
+>>> from glanguage import Translator
+>>> t = Translator()
+>>> t.translate('Hello, World', lang_from='en', lang_to='fr')
+'Bonjour tout le monde'
+>>> what = t.detect('你好')
+>>> what.lang
+'Chinese_simplified'
+>>> what.lang_code
+'zh-CN'
+>>> print what
+<Language: zh-CN (Chinese_simplified)>
+>>>
+
+If the value of lang_from in the translate() method is omitted, 
+the language of the original text will be detected automatically.
+The value of lang_to is default to 'en'.
+
+Support for Google App Engine is added.
+
+A lot credit goes to Peteris Krumins (peter@catonmat.net), who
+wrote the code originally.
